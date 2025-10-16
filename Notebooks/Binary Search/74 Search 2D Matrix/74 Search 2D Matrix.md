@@ -1,4 +1,5 @@
 **Approaching The Problem**
+
 The key insight for this problem is realizing that the 2D matrix is effectively a flattened 1D sorted array in disguise. Each row continues from where the previous one left off, meaning the entire structure maintains global sorted order.
 
 Because of that, we can treat the matrix as if it were a single linear array and apply a binary search over the full range of elements. The main challenge is mapping between the 1D index and the 2D coordinates — this can be done using division and modulus operations:
